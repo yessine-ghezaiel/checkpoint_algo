@@ -1,0 +1,26 @@
+ALGORITHM three_nb_add
+VAR
+    str : STRING ;
+    count_length : INTEGER :=0;
+    count_words : INTEGER :=1;
+    count_vowels: INTEGER :=0;
+    i: INTEGER :=0;
+
+BEGIN
+str = str.lower();
+WHILE (str(i) != '.') DO
+    IF (str(i) =="a" OR str(i) =="e" OR str(i) =="i" OR str(i) =="o" OR str(i) =="u") THEN
+        count_vowels := count_vowels +1;
+    END_IF
+    IF ( str(i)=' ') THEN
+        count_words := count_words + 1;
+    END_IF
+    count_length= i;
+i = i+1;
+ END_WHILE
+
+ Write(count_length + 1)
+ Write(count_vowels)
+ Write(count_words)
+
+END
